@@ -13,7 +13,7 @@ body {
                 "hero hero hero hero"
                 ". main sidebar ."
                 "footer footer footer footer";
-  grid-column-gap: 20px;
+  grid-column-gap: 40px;
 }
 
 
@@ -86,3 +86,40 @@ footer{
   grid-area: footer;
 
 }
+
+/*cards*/
+
+.cards {
+  display: grid;
+
+  /* grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content, auto;
+  grid-template-areas: 
+                  "img title"
+                  "img text";
+   */
+
+  grid-template: 
+        "img title" min-content
+        "img text" auto / 1fr 3fr;
+
+  grid-column-gap: 20px;
+  box-shadow: 1px 0px 7px 8px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 1px 0px 7px 8px rgba(0,0,0,0.33);
+  -moz-box-shadow: 1px 0px 7px 8px rgba(0,0,0,0.33);
+  padding: 1.5em;
+}
+
+.card-img {
+  max-width: 200px;
+  grid-area: img;
+}
+
+.card-title {
+  grid-area: title;
+}
+
+.cord-text {
+  grid-area: text;
+}
+
