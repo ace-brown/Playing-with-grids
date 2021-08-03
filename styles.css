@@ -1,0 +1,88 @@
+
+
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 10em 50vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-areas: 
+                "header header header header "
+                "hero hero hero hero"
+                ". main sidebar ."
+                "footer footer footer footer";
+  grid-column-gap: 20px;
+}
+
+
+.header, 
+.hero-title {
+  font-family: 'Six Caps', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.aside-text, 
+.card-text {
+    font-size: 17px;
+}
+
+header{
+  grid-area: header;
+}
+
+
+header,
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+header h1{
+  margin: 50px 0 0  0;
+  font-size: 48px;
+  color: #5f6948;
+}
+
+.hero {
+   background: url(./hero-pic.jpg);
+   grid-area: hero;
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+   color: rgb(240, 239, 239);
+  
+}
+
+.hero-title {
+  font-size: 58px;
+  margin-bottom: 0;
+  
+}
+
+.hero-subtitle {
+  margin-top: 0;
+}
+
+main{
+  grid-area: main;
+}
+
+aside{
+  grid-area: sidebar;
+  background-color: #c9c9c9;
+  padding: 1.5em;
+}
+
+
+footer{
+  grid-area: footer;
+
+}
