@@ -7,7 +7,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: 10em 50vh auto 10em;
-  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(30em,5fr) minmax(14em, 2fr) 1fr;
   grid-template-areas: 
                 "header header header header "
                 "hero hero hero hero"
@@ -47,7 +47,7 @@ footer {
 header h1{
   margin: 50px 0 0  0;
   font-size: 48px;
-  color: #5f6948;
+  color: #5f7726;
 }
 
 .hero {
@@ -87,6 +87,16 @@ footer{
 
 }
 
+a {
+  text-decoration: none;
+  color: #049e58;
+}
+
+a:hover,
+:active {
+  color: #ad1b9a;
+}
+
 /*cards*/
 
 .cards {
@@ -108,6 +118,7 @@ footer{
   -webkit-box-shadow: 1px 0px 7px 8px rgba(0,0,0,0.33);
   -moz-box-shadow: 1px 0px 7px 8px rgba(0,0,0,0.33);
   padding: 1.5em;
+  margin-bottom:40px;
 }
 
 .card-img {
@@ -117,6 +128,8 @@ footer{
 
 .card-title {
   grid-area: title;
+  margin: 0;
+  font-weight: 300; /*to make it unbold*/
 }
 
 .cord-text {
